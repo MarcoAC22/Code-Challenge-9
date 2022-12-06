@@ -1,0 +1,87 @@
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-5 fw-bold">Signup </h1>
+  <div class="col-lg-3 mx-auto">
+    <form action="/login" method="POST">
+      <div class="mb-2">
+        <label for="firstname" class="form-label">First Name </label>
+        <input
+          type="text"
+          class="form-control"
+          name="firstname"
+          placeholder="firstname"
+          required
+        />
+      </div>
+      
+      <div class="mb-2">
+        <label for="lastname" class="form-label">Last Name </label>
+        <input
+          type="text"
+          class="form-control"
+          name="lastname"
+          placeholder="lastname"
+          required
+        />
+        <div class="mb-2">
+          <label for="myfile">Profile Picture</label>
+          <input type="file" 
+          id="myfile" 
+          name="Profile Picture"
+          required
+          />
+          
+        </div>
+      </div>
+      <div class="mb-2">
+        <label for="birthday" class="form-label">birthday</label>
+        <input
+          type="text"
+          class="form-control"
+          name="birthday"
+          placeholder="birthday"
+          required
+        />
+      <div class="mb-2">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="text"
+          class="form-control"
+          name="email"
+          placeholder="email"
+          required
+        />
+      </div>
+      <div class="mb-2">
+        <label for="username" class="form-label">Username </label>
+        <input
+          type="username"
+          class="form-control"
+          name="username"
+          placeholder="username"
+          required
+        />
+      </div>
+      <div class="mb-2">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <div class="mb-2">
+        <label for="password conformation" class="form-label">Confrim Your Password</label>
+        <input
+          type="password conformation"
+          class="form-control"
+          name="password conformation"
+          placeholder="Password conformation"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mt-2">Submit</button>
+    </form>
+  </div>
+</div>
