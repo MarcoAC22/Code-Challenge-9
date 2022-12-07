@@ -50,15 +50,13 @@ function AuthRouter(database) {
         res.render('./pages/login', { errorMessage: req.query.errorMessage || null });
     });
 
-    router.get('./pages/signup', function (req, res) {
-        res.render('./pages/signup', { errorMessage: req.query.errorMessage || null });
+    router.get('pages/sign_up', function (req, res) {
+        res.render('pages/sign_up', { errorMessage: req.query.errorMessage || null });
     });
 
     router.post('./pages/login', (req, res, next) => {
         passport.authenticate('local', async (_, user) => {
             await new Promise((resolve, reject) => {
-                // If the user is registered and password is correct
-                // Then create a cookie for their session
                 req.login({
                     id: user._id.toString(),
                     username: user.username
@@ -68,7 +66,7 @@ function AuthRouter(database) {
         })(req, res, next);
     });
 
-    router.post('/register', async function (req, res) {
+    router.post('/sign_up', async function (req, res) {
         let data = req.body;
         const salt = crypto.randomBytes(16).toString('hex');
         const hashedPassword = await new Promise((resolve, _) => {

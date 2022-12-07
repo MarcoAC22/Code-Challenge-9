@@ -9,6 +9,7 @@ const User = new mongoose.Schema({
     password: String,
 });
 
+
 // Setting up the passport plugin
 User.plugin(passportLocalMongoose);
 

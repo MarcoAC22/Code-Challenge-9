@@ -84,22 +84,14 @@ router.get("/login", (req, res) => {
     title: "Login",
     isAuthenticated: req.isAuthenticated(),
   });
-
-  router.get("/auth", (req,res)=>{
-    res.render("pages/signup", {
-      title: "signup",
-      isAuthenticated: req.isAuthenticated(),
-    })
-  })
-
-router.get("/signup", (req,res)=>{
-  res.render("pages/signup", {
-    title: "signup",
-    isAuthenticated: req.isAuthenticated(),
-  })
-})
-
 });
+router.get("/sign_up", (req, res) => {
+  res.render("pages/sign_up", {
+    title: "Signup",
+    isAuthenticated: req.isAuthenticated(),
+  });
+});
+
 router.post("/addUsers", (req, res) => {
   users.data.map(async (element) => {
     user.register(

@@ -10,10 +10,11 @@ const UserDetails = require("./User");
 const routes = require("./router");
 const crypto = require("crypto");
 require("dotenv").config();
-const auth = require("./auth")
+const AuthRouter = require('./auth')
 
 // set up view engine and layout
 app.use(expressLayouts);
+app.use('/', AuthRouter('/.env'));
 app.set("layout", "./pages/layout/main");
 app.set("view engine", "ejs");
 
